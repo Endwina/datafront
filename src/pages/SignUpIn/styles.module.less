@@ -1,0 +1,122 @@
+.Login {
+  @Myruler: 16px;
+  @Mycolor-red: #ae1100;
+  @Mycolor-bg: #ebecf0;
+  @Mycolor-shadow: #babecc;
+  @Mycolor-white: #fff;
+
+  background-color: @Mycolor-bg;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  p,
+  input,
+  select,
+  textarea,
+  button {
+    letter-spacing: -0.2px;
+    font-size: @Myruler;
+  }
+
+  div,
+  p {
+    color: @Mycolor-shadow;
+    text-shadow: 1px 1px 1px @Mycolor-white;
+  }
+
+  form {
+    padding: @Myruler;
+    width: @Myruler*20;
+    margin: 0 auto;
+  }
+
+  :global .Segment {
+    padding: @Myruler*2 0;
+    text-align: center;
+  }
+
+  button,
+  input {
+    border: 0;
+    outline: 0;
+    font-size: @Myruler;
+    border-radius: @Myruler*20;
+    padding: @Myruler;
+    background-color: @Mycolor-bg;
+    text-shadow: 1px 1px 0 @Mycolor-white;
+  }
+
+  label {
+    display: block;
+    margin-bottom: @Myruler*1.5;
+    width: 100%;
+  }
+
+  input {
+    margin-right: @Myruler / 2;
+    box-shadow: inset 2px 2px 5px @Mycolor-shadow, inset -5px -5px 10px @Mycolor-white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+
+    &:focus {
+      box-shadow: inset 1px 1px 2px @Mycolor-shadow, inset -1px -1px 2px @Mycolor-white;
+    }
+  }
+
+  button {
+    color: #61677c;
+    font-weight: 600;
+    box-shadow: -5px -5px 20px @Mycolor-white, 5px 5px 20px @Mycolor-shadow;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: -2px -2px 5px @Mycolor-white, 2px 2px 5px @Mycolor-shadow;
+    }
+
+    &:active {
+      box-shadow: inset 1px 1px 2px @Mycolor-shadow, inset -1px -1px 2px @Mycolor-white;
+    }
+
+    .Icon {
+      margin-right: @Myruler / 2;
+    }
+
+    &.Unit {
+      border-radius: @Myruler / 2;
+      line-height: 0;
+      width: @Myruler*3;
+      height: @Myruler*3;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 @Myruler / 2;
+      font-size: @Myruler*1.2;
+
+      .Icon {
+        margin-right: 0;
+      }
+    }
+
+    &.Red {
+      display: block;
+      width: 100%;
+      color: @Mycolor-red;
+    }
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      margin: 0;
+      flex: 1;
+    }
+  }
+}
