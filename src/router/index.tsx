@@ -5,6 +5,8 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 
 import HomePage from '@/pages/HomePage';
+import IndustryInifo from '@/pages/IndustryInfo';
+import SensitiveRule from '@/pages/SensitiveRules';
 import SignUpIn from '@/pages/SignUpIn';
 import { userType } from '@/store';
 
@@ -28,7 +30,7 @@ const routeConfig: routerConfigType[] = [
         auth: [1, 9, 8, 7, 'user1'],
         element: (
           <Suspense fallback={<Spin size="large" />}>
-            <div>概览</div>
+            <IndustryInifo />
           </Suspense>
         ),
       },
@@ -84,7 +86,7 @@ const routeConfig: routerConfigType[] = [
             auth: [1, 9, 8, 7, 'user1'],
             element: (
               <Suspense fallback={<Spin size="large" />}>
-                <div>敏感数据搜索</div>
+                <SensitiveRule />
               </Suspense>
             ),
           },

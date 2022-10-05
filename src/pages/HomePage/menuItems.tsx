@@ -16,8 +16,8 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem('概览', 'menu1'),
-  getItem('数据资产授权', 'menusub1', null, [
+  getItem('行业信息', 'menu1'),
+  getItem('行业详情信息', 'menusub1', null, [
     getItem('服务器资源管理', 'menu2'),
     getItem('数据资产授权', 'menu3'),
   ]),
